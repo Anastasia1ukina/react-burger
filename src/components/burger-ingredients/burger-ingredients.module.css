@@ -1,5 +1,23 @@
 .section {
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ingredients {
+  max-width: 600px;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+  overflow-y: scroll;
+  max-height: 718px;
+  scrollbar-color: #8585ad #2f2f37;
+  scrollbar-width: thin;
 }
