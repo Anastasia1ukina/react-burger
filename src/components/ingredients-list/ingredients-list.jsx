@@ -2,9 +2,10 @@ import React from 'react';
 import { CurrencyIcon } from '@ya.praktikum/react-developer-burger-ui-components';
 import stylesIngredientCard from './ingredients-list.module.css';
 import { ingredientsPropTypes } from '../../utils/prop-type';
+import PropTypes from 'prop-types';
 
-const IngredientsList = ({ ingredients, type }) => {
-  const filteredIngredients = ingredients.filter(item => item.type === type);
+const IngredientsList = ({ products, type }) => {
+  const filteredIngredients = products.filter(item => item.type === type);
 
   return (
     <ul className={stylesIngredientCard.ingredients}>
@@ -27,7 +28,8 @@ const IngredientsList = ({ ingredients, type }) => {
 };
 
 IngredientsList.propTypes = {
-  ingredients: ingredientsPropTypes
+  products: ingredientsPropTypes,
+  type: PropTypes.string.isRequired
 };
 
 export default IngredientsList;
