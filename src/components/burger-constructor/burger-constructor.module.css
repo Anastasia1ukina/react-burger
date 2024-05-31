@@ -1,0 +1,50 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+}
+
+.products {
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  max-height: 464px;
+  overflow-y: scroll;
+  scrollbar-color: #8585ad #2f2f37;
+  scrollbar-width: thin;
+}
+
+.itemFirst {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.item div {
+  margin-left: 8px;
+}
+
+.wrapperOrder {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
+.wrapperPrice {
+  display: flex;
+  gap: 8px;
+}
+
+.wrapperIcon svg {
+  width: 36px;
+  height: 36px;
+}
