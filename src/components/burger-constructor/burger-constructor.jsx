@@ -5,7 +5,7 @@ import { ingredientsPropTypes } from '../../utils/prop-type';
 const BurgerConstructor = ({ products }) => {
 
   return (
-    <div>
+    <div className={`${stylesBurgerConstructor.wrapper} mt-10`}>
       <ul className={`${stylesBurgerConstructor.list}`}>
         <li className={`${stylesBurgerConstructor.itemFirst} mb-4`}>
           <ConstructorElement
