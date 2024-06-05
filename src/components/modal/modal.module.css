@@ -17,22 +17,23 @@
   min-width: 720px;
 }
 
-/* .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.modalContent {
+  position: relative;
 }
-
-.header svg {
-  transition: ease 0.3s;
-}
-
-.header svg:hover {
-  cursor: pointer;
-  opacity: 0.6;
-  transition: ease 0.3s;
-} */
 
 .content {
   text-align: center;
+}
+
+.iconClose svg {
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  transition: ease 0.3s;
+}
+
+.iconClose svg:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: ease 0.3s;
 }

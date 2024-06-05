@@ -37,13 +37,12 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div className={`${stylesModal.wrapper}`}>
       <div className={`${stylesModal.modal}`}>
         <div className={`${stylesModal.modalContent} pt-10 pr-10 pb-15 pl-10`}>
-          {/* <div className={`${stylesModal.header}`}> */}
           <div className={`${stylesModal.content}`}>
-            <CloseIcon type='primary' onClick={onClose} />
+            <div className={`${stylesModal.iconClose}`}>
+              <CloseIcon type='primary' onClick={onClose} />
+            </div>
             {children}
           </div>
-          {/* <h1 className={`${stylesModal.title} text text_type_main-large`}>Детали ингредиента</h1> */}
-          {/* </div> */}
         </div>
       </div>
       <ModalOverlay onClick={onClose} />

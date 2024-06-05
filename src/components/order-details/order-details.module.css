@@ -1,0 +1,15 @@
+.iconWrapper {
+  position: relative;
+}
+
+.iconWrapper img {
+  opacity: 0.6;
+}
+
+.iconWrapper svg {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 26%;
+  left: 46.5%;
+}
