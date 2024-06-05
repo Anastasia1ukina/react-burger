@@ -4,6 +4,7 @@ import stylesIngredientCard from './ingredients-list.module.css';
 import { ingredientsPropTypes } from '../../utils/prop-type';
 import PropTypes from 'prop-types';
 import Modal from '../modal/modal';
+import IngredientDetails from '../ingredient-details/ingredient-details';
 
 const IngredientsList = ({ products, type }) => {
   const [selectedIngredient, setSelectedIngredient] = useState(null);
@@ -45,34 +46,7 @@ const IngredientsList = ({ products, type }) => {
       </ul>
       {isModalOpen && (
         <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <img src={selectedIngredient.image_large} alt={selectedIngredient.name} />
-          <h2>{selectedIngredient.name}</h2>
-          <ul>
-            <li>
-              <p className="text text_type_main-default">
-                Калории,ккал
-              </p>
-              <p>{selectedIngredient.calories}</p>
-            </li>
-            <li>
-              <p className="text text_type_main-default">
-                Белки, г
-              </p>
-              <p>{selectedIngredient.proteins}</p>
-            </li>
-            <li>
-              <p className="text text_type_main-default">
-                Жиры, г
-              </p>
-              <p>{selectedIngredient.fat}</p>
-            </li>
-            <li>
-              <p className="text text_type_main-default">
-                Углеводы, г
-              </p>
-              <p>{selectedIngredient.carbohydrates}</p>
-            </li>
-          </ul>
+          <IngredientDetails ingredient={selectedIngredient} />
         </Modal>
       )}
     </>

@@ -15,12 +15,19 @@ const Modal = ({ isOpen, onClose, children }) => {
       }
     };
 
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
     document.addEventListener('keydown', handleEscClose);
 
     return () => {
+      document.body.style.overflow = '';
       document.removeEventListener('keydown', handleEscClose);
     };
-  }, [onClose]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) {
     return null;
@@ -28,13 +35,15 @@ const Modal = ({ isOpen, onClose, children }) => {
 
   return createPortal(
     <div className={`${stylesModal.wrapper}`}>
-      <div className={`${stylesModal.modal} p-10`}>
-        <div>
-          <h1>Детали ингредиента</h1>
-          <CloseIcon type='primary' onClick={onClose} />
-        </div>
-        <div className={`${stylesModal.content}`}>
-          {children}
+      <div className={`${stylesModal.modal}`}>
+        <div className={`${stylesModal.modalContent} pt-10 pr-10 pb-15 pl-10`}>
+          {/* <div className={`${stylesModal.header}`}> */}
+          <div className={`${stylesModal.content}`}>
+            <CloseIcon type='primary' onClick={onClose} />
+            {children}
+          </div>
+          {/* <h1 className={`${stylesModal.title} text text_type_main-large`}>Детали ингредиента</h1> */}
+          {/* </div> */}
         </div>
       </div>
       <ModalOverlay onClick={onClose} />
