@@ -73,7 +73,8 @@ const BurgerConstructor = ({ products, children }) => {
 }
 
 BurgerConstructor.propTypes = {
-  products: ingredientsPropTypes
+  products: ingredientsPropTypes,
+  children: ingredientsPropTypes
 };
 
 export default BurgerConstructor;

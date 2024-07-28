@@ -16,7 +16,7 @@ const BurgerIngredients = () => {
     <div>
       <h1 className="text text_type_main-large">Соберите бургер</h1>
       <div className={stylesBurgerIngredients.ingredients}>
-        <div style={{ display: 'flex' }}>
+        <div className={stylesBurgerIngredients.tabs}>
           <Tab value="bun" active={current === 'bun'} onClick={() => handleTabClick('bun')}>
             Булки
           </Tab>
