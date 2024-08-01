@@ -1,5 +1,5 @@
 import stylesIngredientDetails from './ingredient-details.module.css';
-import { ingredientsPropTypes } from '../../utils/prop-type';
+import { ingredientPropTypes } from '../../utils/prop-type';
 
 const IngredientDetails = ({ ingredient }) => {
   if (!ingredient) {
@@ -42,7 +42,7 @@ const IngredientDetails = ({ ingredient }) => {
 }
 
 IngredientDetails.propTypes = {
-  ingredient: ingredientsPropTypes,
+  ingredient: ingredientPropTypes.isRequired,
 };
 
 export default IngredientDetails;

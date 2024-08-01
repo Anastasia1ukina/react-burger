@@ -4,6 +4,7 @@ import { ingredientsPropTypes } from '../../utils/prop-type';
 import OrderDetails from '../order-details/order-details';
 import { useState } from 'react';
 import Modal from '../modal/modal';
+import PropTypes from 'prop-types';
 
 const BurgerConstructor = ({ products, children }) => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -74,7 +75,7 @@ const BurgerConstructor = ({ products, children }) => {
 
 BurgerConstructor.propTypes = {
   products: ingredientsPropTypes,
-  children: ingredientsPropTypes
+  children: PropTypes.node
 };
 
 export default BurgerConstructor;
