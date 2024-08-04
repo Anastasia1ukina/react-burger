@@ -18,3 +18,17 @@
   display: inline-flex;
   gap: 8px;
 }
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  width: 516px;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}

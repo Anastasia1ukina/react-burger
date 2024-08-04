@@ -1,0 +1,39 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.modal {
+  background-color: #1C1C21;
+  border-radius: 40px;
+  min-width: 720px;
+}
+
+.modalContent {
+  position: relative;
+}
+
+.content {
+  text-align: center;
+}
+
+.iconClose svg {
+  position: absolute;
+  right: 40px;
+  top: 60px;
+  transition: ease 0.3s;
+}
+
+.iconClose svg:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: ease 0.3s;
+}

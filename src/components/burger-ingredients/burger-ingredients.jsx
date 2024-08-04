@@ -1,12 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 import { Tab } from '@ya.praktikum/react-developer-burger-ui-components';
 import stylesBurgerIngredients from './burger-ingredients.module.css';
 import IngredientsList from '../ingredients-list/ingredients-list';
 import data from '../../utils/data';
-// import BurgerConstructor from '../burger-constructor/burger-constructor';
 
 const BurgerIngredients = () => {
-  const [current, setCurrent] = React.useState('bun');
+  const [current, setCurrent] = useState('bun');
 
   const handleTabClick = (tab) => {
     setCurrent(tab);
@@ -17,7 +16,7 @@ const BurgerIngredients = () => {
     <div>
       <h1 className="text text_type_main-large">Соберите бургер</h1>
       <div className={stylesBurgerIngredients.ingredients}>
-        <div style={{ display: 'flex' }}>
+        <div className={stylesBurgerIngredients.tabs}>
           <Tab value="bun" active={current === 'bun'} onClick={() => handleTabClick('bun')}>
             Булки
           </Tab>

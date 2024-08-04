@@ -2,6 +2,10 @@
   max-width: 600px;
 }
 
+.tabs {
+  display: flex;
+}
+
 .list {
   padding: 0;
   list-style-type: none;
